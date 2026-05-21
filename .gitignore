@@ -1,0 +1,16 @@
+# Environment
+.env
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs (keep sample logs for submission, ignore runtime logs)
+# logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

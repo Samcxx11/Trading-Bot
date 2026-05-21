@@ -1,0 +1,37 @@
+2026-05-21 13:00:22 | INFO     | trading_bot.setup_logging:58 | Logging initialized — file: /Users/samarthralph/Desktop/something/trading_bot/logs/trading_bot_20260521_130022.log
+2026-05-21 13:00:22 | INFO     | trading_bot.main:195 | CLI invoked with: order --symbol ETHUSDT --side SELL --type LIMIT --quantity 0.05 --price 2500
+2026-05-21 13:00:22 | DEBUG    | trading_bot.validate_order_type:86 | Order type validated: LIMIT
+2026-05-21 13:00:22 | DEBUG    | trading_bot.validate_symbol:44 | Symbol validated: ETHUSDT
+2026-05-21 13:00:22 | DEBUG    | trading_bot.validate_side:64 | Side validated: SELL
+2026-05-21 13:00:22 | DEBUG    | trading_bot.validate_quantity:109 | Quantity validated: 0.05
+2026-05-21 13:00:22 | DEBUG    | trading_bot.validate_price:145 | Price validated: 2500.0
+2026-05-21 13:00:22 | INFO     | trading_bot.validate_order_params:215 | All order parameters validated successfully.
+2026-05-21 13:00:22 | INFO     | trading_bot.__init__:77 | BinanceFuturesClient initialized (testnet).
+2026-05-21 13:00:22 | INFO     | trading_bot.execute_order:85 | 
+==============================================
+           ORDER REQUEST SUMMARY
+==============================================
+  Symbol      : ETHUSDT
+  Side        : SELL
+  Type        : LIMIT
+  Quantity    : 0.05
+  Price       : 2500.0
+==============================================
+2026-05-21 13:00:22 | INFO     | trading_bot.place_order:226 | Placing order: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'timeInForce': 'GTC', 'quantity': 0.05, 'price': 2500.0}
+2026-05-21 13:00:22 | DEBUG    | trading_bot._signed_request:142 | API POST → https://testnet.binancefuture.com/fapi/v1/order
+2026-05-21 13:00:22 | DEBUG    | trading_bot._signed_request:143 | Params: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'timeInForce': 'GTC', 'quantity': 0.05, 'price': 2500.0, 'timestamp': 1779348622912, 'recvWindow': 5000}
+2026-05-21 13:00:23 | DEBUG    | trading_bot._signed_request:158 | Response [200]: {"orderId":8718954397,"symbol":"ETHUSDT","status":"NEW","clientOrderId":"uRbcr1IWdDdYZfjk5Czb4x","price":"2500.00","avgPrice":"0.00","origQty":"0.050","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTi
+2026-05-21 13:00:23 | INFO     | trading_bot.execute_order:115 | 
+==============================================
+           ORDER RESPONSE DETAILS
+==============================================
+  Order ID    : 8718954397
+  Symbol      : ETHUSDT
+  Side        : SELL
+  Type        : LIMIT
+  Status      : NEW
+  Orig Qty    : 0.050
+  Executed Qty: 0.000
+  Avg Price   : 0.00
+==============================================
+2026-05-21 13:00:23 | INFO     | trading_bot.execute_order:123 | Order successful: ID=8718954397 Status=NEW

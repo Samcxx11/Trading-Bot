@@ -1,0 +1,35 @@
+2026-05-21 13:00:08 | INFO     | trading_bot.setup_logging:58 | Logging initialized — file: /Users/samarthralph/Desktop/something/trading_bot/logs/trading_bot_20260521_130008.log
+2026-05-21 13:00:08 | INFO     | trading_bot.main:195 | CLI invoked with: order --symbol BTCUSDT --side BUY --type MARKET --quantity 0.001
+2026-05-21 13:00:08 | DEBUG    | trading_bot.validate_order_type:86 | Order type validated: MARKET
+2026-05-21 13:00:08 | DEBUG    | trading_bot.validate_symbol:44 | Symbol validated: BTCUSDT
+2026-05-21 13:00:08 | DEBUG    | trading_bot.validate_side:64 | Side validated: BUY
+2026-05-21 13:00:08 | DEBUG    | trading_bot.validate_quantity:109 | Quantity validated: 0.001
+2026-05-21 13:00:08 | INFO     | trading_bot.validate_order_params:215 | All order parameters validated successfully.
+2026-05-21 13:00:08 | INFO     | trading_bot.__init__:77 | BinanceFuturesClient initialized (testnet).
+2026-05-21 13:00:08 | INFO     | trading_bot.execute_order:85 | 
+==============================================
+           ORDER REQUEST SUMMARY
+==============================================
+  Symbol      : BTCUSDT
+  Side        : BUY
+  Type        : MARKET
+  Quantity    : 0.001
+==============================================
+2026-05-21 13:00:08 | INFO     | trading_bot.place_order:226 | Placing order: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-05-21 13:00:11 | DEBUG    | trading_bot._signed_request:142 | API POST → https://testnet.binancefuture.com/fapi/v1/order
+2026-05-21 13:00:11 | DEBUG    | trading_bot._signed_request:143 | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1779348611644, 'recvWindow': 5000}
+2026-05-21 13:00:11 | DEBUG    | trading_bot._signed_request:158 | Response [200]: {"orderId":13171378057,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"ugsoSJz4oyV0pqT0bTS9Z4","price":"0.00","avgPrice":"0.00","origQty":"0.0010","executedQty":"0.0000","cumQty":"0.0000","cumQuote":"0.000000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updat
+2026-05-21 13:00:11 | INFO     | trading_bot.execute_order:115 | 
+==============================================
+           ORDER RESPONSE DETAILS
+==============================================
+  Order ID    : 13171378057
+  Symbol      : BTCUSDT
+  Side        : BUY
+  Type        : MARKET
+  Status      : NEW
+  Orig Qty    : 0.0010
+  Executed Qty: 0.0000
+  Avg Price   : 0.00
+==============================================
+2026-05-21 13:00:11 | INFO     | trading_bot.execute_order:123 | Order successful: ID=13171378057 Status=NEW
